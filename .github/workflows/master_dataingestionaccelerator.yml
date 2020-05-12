@@ -20,11 +20,15 @@ jobs:
       with:
         python-version: '3.6'
 
-    - name: Install Python dependencies
+    - name: 'Run pip'
+      shell: bash
       run: |
-        python3 -m venv env
-        source env/bin/activate
-        pip install -r requirements.txt
+        # If your web app project is not located in your repository's root
+        # Please change your directory for pip in pushd
+        pushd .
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt --target=".python_packages/lib/python3.6/site-packages"
+        popd
     - name: Zip the application files
       run: zip -r myapp.zip .
 
