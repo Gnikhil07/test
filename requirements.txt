@@ -6,7 +6,7 @@ Jinja2==2.11.2
 MarkupSafe==1.1.1
 mysql-connector-python==8.0.19
 mysqlclient==1.4.6
-numpy==1.18.3
+numpy==1.22.0
 pandas==1.0.3
 pandasql==0.7.3
 py==1.8.1
